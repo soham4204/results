@@ -272,7 +272,7 @@ const ResultPage = ({ prn }) => {
               <p><span className="font-medium">University PRN:</span> {studentData.universityPRN}</p>
             </div>
             <div className="justify-self-end">
-              <img src={image} className="h-16 w-16 mx-auto" />
+              <img src={image} alt='Profile Pic' className="h-16 w-16 mx-auto" />
             </div>
           </div>
           <div className="mt-2 grid grid-cols-2 gap-2 text-sm">
