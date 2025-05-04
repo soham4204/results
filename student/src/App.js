@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import image from './assets/image.png';
 
 // Main App Component
 const App = () => {
@@ -126,7 +127,7 @@ const FormComponent = ({ prn, setPrn, dob, setDob, handleLogin, isLoading, error
 const ResultPage = ({ prn }) => {
   const studentData = {
     name: "THASAL JAY RAVINDRA RAVINA",
-    examSeatNo: "2215010218",
+    examSeatNo: "2215010216",
     universityPRN: "202201640126145",
     semester: "VI",
     examMonth: "March-2025",
@@ -137,91 +138,91 @@ const ResultPage = ({ prn }) => {
         code: "JBCUBMS05-MKT",
         title: "BRAND MANAGEMENT",
         internalMarks: "24/40",
-        externalMarks: "48/60",
-        totalMarks: "72/100",
+        externalMarks: "24/60",
+        totalMarks: "48/100",
         grade: "C",
-        gradePoints: "7",
-        credits: "4",
-        creditPoints: "28"
+        gradePoints: "5",
+        credits: "3",
+        creditPoints: "15"
       },
       {
         code: "JBCUBMS06-MKT",
         title: "RETAIL MANAGEMENT",
         internalMarks: "25/40",
-        externalMarks: "42/60",
-        totalMarks: "67/100",
+        externalMarks: "24/60",
+        totalMarks: "49/100",
+        grade: "C",
+        gradePoints: "5",
+        credits: "3",
+        creditPoints: "15"
+      },
+      {
+        code: "JBCUBMS07-MKT",
+        title: "INTERNATIONAL MARKETING",
+        internalMarks: "17/40",
+        externalMarks: "25/60",
+        totalMarks: "42/100",
         grade: "D",
+        gradePoints: "4",
+        credits: "3",
+        creditPoints: "12"
+      },
+      {
+        code: "JBCUBMS08-MKT",
+        title: "MEDIA PLANNING & MANAGEMENT",
+        internalMarks: "29/40",
+        externalMarks: "24/60",
+        totalMarks: "53/100",
+        grade: "B",
         gradePoints: "6",
         credits: "3",
         creditPoints: "18"
       },
       {
-        code: "JBCUBMS07-MKT",
-        title: "SERVICES MARKETING",
-        internalMarks: "29/40",
-        externalMarks: "53/60",
-        totalMarks: "82/100",
-        grade: "B",
-        gradePoints: "8",
-        credits: "3",
-        creditPoints: "24"
-      },
-      {
-        code: "JBCUBMS08-MKT",
-        title: "MEDIA PLANNING & MANAGEMENT",
-        internalMarks: "34/40",
-        externalMarks: "43/60",
-        totalMarks: "77/100",
-        grade: "A",
-        gradePoints: "9",
-        credits: "4",
-        creditPoints: "36"
-      },
-      {
         code: "JBCUBMS13-MKT",
         title: "OPERATION RESEARCH",
-        internalMarks: "29/40",
-        externalMarks: "47/60",
-        totalMarks: "76/100",
-        grade: "B",
-        gradePoints: "8",
-        credits: "3",
-        creditPoints: "24"
+        internalMarks: "34/40",
+        externalMarks: "24/60",
+        totalMarks: "58/100",
+        grade: "B+",
+        gradePoints: "7",
+        credits: "4",
+        creditPoints: "28"
       },
       {
         code: "JBCUBMS14-MKT",
         title: "PROJECT WORK",
-        internalMarks: "-",
-        externalMarks: "-",
+        internalMarks: "20/40",
+        externalMarks: "47/60",
         totalMarks: "67/100",
         grade: "A",
-        gradePoints: "9",
+        gradePoints: "8",
         credits: "4",
-        creditPoints: "36"
+        creditPoints: "32"
       }
     ],
-    totalMarks: "363/600",
-    sgpi: "NA",
-    overallGrade: "NA",
-    remark: "UNSUCCESSFUL",
-    creditsEarned: "17",
+    totalMarks: "317/600",
+    sgpi: "6",
+    overallGrade: "C+",
+    remark: "SUCCESSFUL",
+    creditsEarned: "20",
     semesterCredits: {
       "SEM I": "5.10",
       "SEM II": "5.45",
       "SEM III": "6.10",
       "SEM IV": "6.45",
       "SEM V": "6.10",
-      "SEM VI": "NA"
+      "SEM VI": "6"
     },
     semesterCreditPoints: {
       "SEM I": "20",
-      "SEM II": "29",
+      "SEM II": "20",
       "SEM III": "20",
       "SEM IV": "20",
       "SEM V": "20",
-      "SEM VI": "NA"
+      "SEM VI": "20"
     },
-    cgpi: "NA"
+    cgpi: "5.76"
   };
 
   const goBack = () => {
@@ -270,15 +271,20 @@ const ResultPage = ({ prn }) => {
               <p><span className="font-medium">Examination Seat No:</span> {studentData.examSeatNo}</p>
               <p><span className="font-medium">University PRN:</span> {studentData.universityPRN}</p>
             </div>
+            <div className="justify-self-end">
+              <img src={image} className="h-16 w-16 mx-auto" />
+            </div>
+          </div>
+          <div className="mt-2 grid grid-cols-2 gap-2 text-sm">
+            <div>
+              <p><span className="font-medium">Name of the Learner:</span> {studentData.name}</p>
+              <p><span className="font-medium">Specialization:</span> {studentData.specialization}</p>
+            </div>
             <div className="text-right">
               <p><span className="font-medium">SEMESTER:</span> {studentData.semester}</p>
               <p><span className="font-medium">Month and Year of Exam:</span> {studentData.examMonth}</p>
               <p><span className="font-medium">Type:</span> {studentData.examType}</p>
             </div>
-          </div>
-          <div className="mt-2">
-            <p><span className="font-medium">Name of the Learner:</span> {studentData.name}</p>
-            <p><span className="font-medium">Specialization:</span> {studentData.specialization}</p>
           </div>
         </div>
         
@@ -298,9 +304,9 @@ const ResultPage = ({ prn }) => {
               <tr className="bg-gray-100">
                 <th className="border px-2 py-1 text-center">Internal</th>
                 <th className="border px-2 py-1 text-center">External</th>
+                <th className="border px-2 py-1 text-center">Min Marks</th>
                 <th className="border px-2 py-1 text-center">Total</th>
                 <th className="border px-2 py-1 text-center">Max Marks</th>
-                <th className="border px-2 py-1 text-center">Min Marks</th>
               </tr>
             </thead>
             <tbody>
@@ -310,9 +316,9 @@ const ResultPage = ({ prn }) => {
                   <td className="border px-2 py-1">{course.title}</td>
                   <td className="border px-2 py-1 text-center">{course.internalMarks}</td>
                   <td className="border px-2 py-1 text-center">{course.externalMarks}</td>
+                  <td className="border px-2 py-1 text-center">40</td>
                   <td className="border px-2 py-1 text-center">{course.totalMarks}</td>
                   <td className="border px-2 py-1 text-center">100</td>
-                  <td className="border px-2 py-1 text-center">40</td>
                   <td className="border px-2 py-1 text-center">{course.grade}</td>
                   <td className="border px-2 py-1 text-center">{course.credits}</td>
                   <td className="border px-2 py-1 text-center">{course.gradePoints}</td>
@@ -320,7 +326,7 @@ const ResultPage = ({ prn }) => {
                 </tr>
               ))}
               <tr className="bg-gray-100 font-medium">
-                <td colSpan="4" className="border px-2 py-1 text-right">Total</td>
+                <td colSpan="5" className="border px-2 py-1 text-right">Total</td>
                 <td className="border px-2 py-1 text-center">{studentData.totalMarks}</td>
                 <td colSpan="2" className="border px-2 py-1"></td>
                 <td colSpan="2" className="border px-2 py-1 text-right">SGPI:</td>
