@@ -31,7 +31,7 @@ const App = () => {
     // Simulate API call with timeout
     setTimeout(() => {
       // Valid credentials (for demo purposes)
-      if (prn === '202201640126145' && dob) {
+      if (prn === '2215010216' && dob) {
         setIsLoggedIn(true);
       } else {
         setError('Invalid PRN number or Date of Birth');
