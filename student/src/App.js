@@ -202,17 +202,17 @@ const ResultPage = ({ prn }) => {
       }
     ],
     totalMarks: "317/600",
-    sgpi: "6",
+    sgpi: "6.00",
     overallGrade: "C+",
     remark: "SUCCESSFUL",
     creditsEarned: "20",
     semesterCredits: {
       "SEM I": "5.10",
       "SEM II": "5.45",
-      "SEM III": "6.10",
-      "SEM IV": "6.45",
-      "SEM V": "6.10",
-      "SEM VI": "6"
+      "SEM III": "5.50",
+      "SEM IV": "6.10",
+      "SEM V": "6.45",
+      "SEM VI": "6.00"
     },
     semesterCreditPoints: {
       "SEM I": "20",
